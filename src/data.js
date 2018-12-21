@@ -1,17 +1,43 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+function filterData(data, filterBy, condition) {
+  let listIdPokemonType = [];
+  switch (filterBy) {
+  case 'Tipo':
+    listIdPokemonType = data.filter(compare => (compare.type[0] === condition || compare.type[1] === condition || compare.type[2] === condition));
+    break;
+  case 'Huevo':
+    listIdPokemonType = data.filter(compare => (compare.egg === condition));
+    break;
+  default:
+  }
+  return listIdPokemonType;
+}
 
-/*const example = () => {
-  return 'example';
+function sortData(data, sortBy, condition) {
+  let listPokemonOrder = [];
+  switch (condition) {
+  case 'asc':
+    if (sortBy === 'number') {
+      listPokemonOrder = data.sort((aa, bb) => (aa.id > bb.id ? 1 : -1));
+    } else {
+      listPokemonOrder = data.sort((aa, bb) => (aa.name > bb.name ? 1 : -1));
+    }
+    break;
+  case 'desc':
+    listPokemonOrder = data.sort((aa, bb) => (aa.name > bb.name ? 1 : -1)).reverse();
+    break;
+  default:
+  }
+  return listPokemonOrder;
+}
+
+function computeStats(data, condition, count) {
+  const nameFilter = data.filter(compare => (compare.name === condition));
+  const newCandy = nameFilter[0].candy_count - count;
+  return newCandy;
+}
+
+window.pokemonFunction = {
+  filterData,
+  sortData,
+  computeStats,
 };
-
-window.example = example;*/
-
-window.POKEMON  = POKEMON;
-const containerlist = document.getElementById("pokemon-list");
-let list  = '';
-POKEMON.pokemon.forEach((pokemones)  =>  {
-  const li  = `<li>${pokemones.name}</li>`  + `<img src="${pokemones.img}">`;
-  list  = list  + li;
-})
-containerlist.innerHTML = list;
