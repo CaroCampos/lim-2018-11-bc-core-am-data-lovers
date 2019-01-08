@@ -42,8 +42,8 @@ function stats(data, condition) {
     const arrFilterPokemonType = data.filter(compare => (compare.type[0] === condition[i] || compare.type[1] === condition[i]));
     const totalWeaknesses = arrFilterPokemonType.reduce(
       (total, pokemon) => total + (pokemon.weaknesses.length), 0);
-    const Average = totalWeaknesses / arrFilterPokemonType.length;
-    arrAverage.push(Average);
+    const average = totalWeaknesses / arrFilterPokemonType.length;
+    arrAverage.push(average);
   }
   return arrAverage;
 }
