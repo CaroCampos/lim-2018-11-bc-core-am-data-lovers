@@ -25,7 +25,7 @@ La idea de llegar a convertirse en un maestro Pokémon es un feeling con el que 
 
 Pokémon Go Dashboard es una herramienta de ayuda para todos los usuarios de Pokémon Go, ya que te permite hacer, desde una búsqueda específica de un Pokémon, filtrarlos por tipo y tipo de huevo. Hacer un cálculo real de caramelos que le falta a tu Pokémon para llegar a la siguiente evolución, también se podré ver tablas estadísticas según el promedio de debilidades por tipo de Pokémon.
 
-link a [Pokémon-Go-Dashboard](https://carocampos.github.io/lim-2018-11-bc-core-am-data-lovers/src/)
+link a [Pokémon-Go-Dashboard](https://carocampossalazar.github.io/lim-2018-11-bc-core-am-data-lovers/src/)
 
 
 ## Definición del producto
